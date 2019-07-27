@@ -10,7 +10,6 @@ var MessagesView = {
   },
 
   renderMessage: function(message) {
-console.log(message)
   for (var key in message) {
     if (message[key].includes("<") || message[key].includes("src=") ) {
       message[key] = "nice try"
