@@ -4,9 +4,14 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
+    $( document ).ready(function() {
+        console.log( "ready!" );
+    });
   },
 
-  render: function() {
+  renderRoom: function(roomname) {
+  if (roomname.includes("<") || roomname.includes("src=")) {
+    roomname = "nice try";
   }
-
-};
+    
+}
