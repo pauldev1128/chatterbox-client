@@ -10,6 +10,9 @@ var App = {
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
+    Rooms.add()
+    Friends.toggleStatus();
+    Messages.add();
 
     // Fetch initial batch of messages
     App.startSpinner();
@@ -24,6 +27,7 @@ console.log(data)
     for (var i = 0; i < data.results.length; i++) {
       MessagesView.renderMessage(data.results[i]);
       RoomsView.renderRoom(data.results[i].roomname);
+
       callback();
     }
 
